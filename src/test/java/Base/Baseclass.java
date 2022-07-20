@@ -3,6 +3,7 @@ package Base;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -71,6 +72,9 @@ public class Baseclass {
         String date1= dateFormat.format(date);
         return date1;
     }
-
+    public static String randomestring(){
+        String generatedString1 = RandomStringUtils.randomAlphabetic(5);
+        return (generatedString1);
+    }
 
 }

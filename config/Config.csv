@@ -1,6 +1,6 @@
 key,value
 environment,sit,
-sit_url,http://automationpractice.com/index.php?controller=authentication&back=my-account,
+sit_url,http://admin-demo.nopcommerce.com/login,
 browser,chrome,
 executionMethod,local,
 executionScheme,all,

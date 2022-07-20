@@ -12,7 +12,8 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		},
-		tags = "@smoke"
+		monochrome=true,
+		tags= "@regression"
 		)
 
 public class MyTestRunner {
