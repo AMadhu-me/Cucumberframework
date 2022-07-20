@@ -1,3 +1,3 @@
-cd E:\Selenium\Framework\LatestCucumber6WithPOM-master
-mvn test -Dcucumber.options="--t @smoke"
+cd E:\Selenium\Framework\ReddyRepository\Cucumberframework
+mvn test -Dcucumber.options="--t @regression"
 

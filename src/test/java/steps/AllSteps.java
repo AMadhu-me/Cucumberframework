@@ -121,6 +121,7 @@ public class AllSteps extends Baseclass {
     @When("User enter customer info")
     public void user_enter_customer_info() throws InterruptedException {
         String email = randomestring() + "@gmail.com";
+        System.out.println("Emailaddress:::::"+email);
         addCust.setEmail(email);
         addCust.setPassword("test123");
         addCust.setCustomerRoles("Guest");
@@ -128,10 +129,10 @@ public class AllSteps extends Baseclass {
 
         addCust.setManagerOfVendor("Vendor 2");
         addCust.setGender("Male");
-        addCust.setFirstName("Pavan");
-        addCust.setLastName("Kumar");
-        addCust.setDob("7/05/1985"); // Format: D/MM/YYY
-        addCust.setCompanyName("busyQA");
+        addCust.setFirstName("Reddy");
+        addCust.setLastName("J");
+        addCust.setDob("7/05/1991"); // Format: D/MM/YYY
+        addCust.setCompanyName("Self");
         addCust.setAdminContent("This is for testing.........");
     }
 

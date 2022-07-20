@@ -12,10 +12,10 @@ public class AddcustomerPage extends Baseclass {
 
 
 	
-	By lnkCustomers_menu=By.xpath("//a[@href='#']//span[contains(text(),'Customers')]");
-	By lnkCustomers_menuitem=By.xpath("//span[@class='menu-item-title'][contains(text(),'Customers')]");
+	By lnkCustomers_menu=By.xpath("//a[@href='#']//*[contains(text(),'Customers')]");
+	By lnkCustomers_menuitem=By.xpath("(//*[contains(text(),'Customers')])[2]");
 	
-	By btnAddnew=By.xpath("//a[@class='btn bg-blue']"); //Add new
+	By btnAddnew=By.xpath("//a[@class='btn btn-primary']"); //Add new
 		
 	By txtEmail=By.xpath("//input[@id='Email']");
 	By txtPassword=By.xpath("//input[@id='Password']");
@@ -106,9 +106,6 @@ public class AddcustomerPage extends Baseclass {
 			{
 				listitem=driver.findElement(lstitemGuests);
 			}
-						
-			//listitem.click();
-			//Thread.sleep(3000);
 			
 			JavascriptExecutor js = (JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();", listitem);

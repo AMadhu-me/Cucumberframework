@@ -1,6 +1,6 @@
 Feature: Login 
 
-@sanity
+
 Scenario: Successful Login with Valid Credentials
 	Given Launch the application URL
 	When User enters Email as "admin@yourstore.com" and Password as "admin"

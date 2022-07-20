@@ -1,33 +1,11 @@
-2022-07-20 18:07:507 INFO  ApplicationHooks:46 - Executed Before scenario method.....
-2022-07-20 18:07:843 INFO  Baseclass:38 - 07/20/2022 18:10:48-Successfully launched the browser : chrome
-2022-07-20 18:07:851 INFO  Baseclass:65 - 07/20/2022 18:10:51-Successfully launched the Application in : sit
-2022-07-20 18:07:856 INFO  AllSteps:55 - ************* Prvding user and password *****************
-2022-07-20 18:07:194 INFO  AllSteps:62 - ************* click on login *****************
-2022-07-20 18:07:889 INFO  AllSteps:92 - ********* Verifying Dashboad page title after login successful **************
-2022-07-20 18:07:929 INFO  AllSteps:99 - ********* Clicking on customer main menu **************
-2022-07-20 18:07:37 INFO  ApplicationHooks:59 - Executed After scenario method.....
-2022-07-20 18:07:156 INFO  ApplicationHooks:46 - Executed Before scenario method.....
-2022-07-20 18:07:157 INFO  Baseclass:38 - 07/20/2022 18:11:11-Successfully launched the browser : chrome
-2022-07-20 18:07:977 INFO  Baseclass:65 - 07/20/2022 18:11:14-Successfully launched the Application in : sit
-2022-07-20 18:07:979 INFO  AllSteps:55 - ************* Prvding user and password *****************
-2022-07-20 18:07:401 INFO  AllSteps:62 - ************* click on login *****************
-2022-07-20 18:07:876 INFO  AllSteps:92 - ********* Verifying Dashboad page title after login successful **************
-2022-07-20 18:07:896 INFO  AllSteps:99 - ********* Clicking on customer main menu **************
-2022-07-20 18:07:953 INFO  ApplicationHooks:59 - Executed After scenario method.....
-2022-07-20 18:07:49 INFO  ApplicationHooks:46 - Executed Before scenario method.....
-2022-07-20 18:07:751 INFO  Baseclass:38 - 07/20/2022 18:11:34-Successfully launched the browser : chrome
-2022-07-20 18:07:115 INFO  Baseclass:65 - 07/20/2022 18:11:37-Successfully launched the Application in : sit
-2022-07-20 18:07:120 INFO  AllSteps:55 - ************* Prvding user and password *****************
-2022-07-20 18:07:490 INFO  AllSteps:62 - ************* click on login *****************
-2022-07-20 18:07:40 INFO  AllSteps:77 - ************* Login Passed *****************
-2022-07-20 18:07:79 INFO  AllSteps:85 - ************* clciking on logout *****************
-2022-07-20 18:07:778 INFO  AllSteps:77 - ************* Login Passed *****************
-2022-07-20 18:07:981 INFO  LoginPage:39 - 07/20/2022 18:11:51-successfully closed the browser
-2022-07-20 18:07:982 INFO  ApplicationHooks:59 - Executed After scenario method.....
-2022-07-20 18:07:26 INFO  ApplicationHooks:46 - Executed Before scenario method.....
-2022-07-20 18:07:948 INFO  Baseclass:38 - 07/20/2022 18:11:54-Successfully launched the browser : chrome
-2022-07-20 18:07:13 INFO  Baseclass:65 - 07/20/2022 18:11:58-Successfully launched the Application in : sit
-2022-07-20 18:07:14 INFO  AllSteps:55 - ************* Prvding user and password *****************
-2022-07-20 18:07:408 INFO  AllSteps:62 - ************* click on login *****************
-2022-07-20 18:07:966 INFO  AllSteps:71 - ************* Login failed *****************
-2022-07-20 18:07:82 INFO  ApplicationHooks:59 - Executed After scenario method.....
+2022-07-20 18:07:784 INFO  ApplicationHooks:46 - Executed Before scenario method.....
+2022-07-20 18:07:227 INFO  Baseclass:38 - 07/20/2022 18:58:06-Successfully launched the browser : chrome
+2022-07-20 18:07:308 INFO  Baseclass:65 - 07/20/2022 18:58:09-Successfully launched the Application in : sit
+2022-07-20 18:07:309 INFO  AllSteps:55 - ************* Prvding user and password *****************
+2022-07-20 18:07:949 INFO  AllSteps:62 - ************* click on login *****************
+2022-07-20 18:07:647 INFO  AllSteps:92 - ********* Verifying Dashboad page title after login successful **************
+2022-07-20 18:07:683 INFO  AllSteps:99 - ********* Clicking on customer main menu **************
+2022-07-20 18:07:843 INFO  AllSteps:106 - ********* Clicking on customer sub menu **************
+2022-07-20 18:07:278 INFO  AllSteps:141 - ********* Saving customer details **************
+2022-07-20 18:07:957 INFO  LoginPage:39 - 07/20/2022 18:58:34-successfully closed the browser
+2022-07-20 18:07:958 INFO  ApplicationHooks:59 - Executed After scenario method.....
