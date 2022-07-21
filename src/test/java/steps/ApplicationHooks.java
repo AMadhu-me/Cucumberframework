@@ -24,7 +24,8 @@ public class ApplicationHooks {
 	Logger log = LoggerHelper.getLogger(ApplicationHooks.class);
 
 	@Before(order = 0)
-	public void getProperty() throws Exception {
+	public void getProperty(Scenario scenario) throws Exception {
+		GlobalVariables.scenarioName=scenario.getName();
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 		PropertiesLoader propertiesLoader = new PropertiesLoader();

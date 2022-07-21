@@ -1,11 +1,3 @@
-2022-07-20 18:07:784 INFO  ApplicationHooks:46 - Executed Before scenario method.....
-2022-07-20 18:07:227 INFO  Baseclass:38 - 07/20/2022 18:58:06-Successfully launched the browser : chrome
-2022-07-20 18:07:308 INFO  Baseclass:65 - 07/20/2022 18:58:09-Successfully launched the Application in : sit
-2022-07-20 18:07:309 INFO  AllSteps:55 - ************* Prvding user and password *****************
-2022-07-20 18:07:949 INFO  AllSteps:62 - ************* click on login *****************
-2022-07-20 18:07:647 INFO  AllSteps:92 - ********* Verifying Dashboad page title after login successful **************
-2022-07-20 18:07:683 INFO  AllSteps:99 - ********* Clicking on customer main menu **************
-2022-07-20 18:07:843 INFO  AllSteps:106 - ********* Clicking on customer sub menu **************
-2022-07-20 18:07:278 INFO  AllSteps:141 - ********* Saving customer details **************
-2022-07-20 18:07:957 INFO  LoginPage:39 - 07/20/2022 18:58:34-successfully closed the browser
-2022-07-20 18:07:958 INFO  ApplicationHooks:59 - Executed After scenario method.....
+2022-07-21 10:07:840 INFO  ApplicationHooks:47 - Executed Before scenario method.....
+2022-07-21 10:07:871 INFO  AllSteps:42 - Execution is not enabled for this scenario : Successful Login with Valid Credentials1
+2022-07-21 10:07:883 INFO  ApplicationHooks:60 - Executed After scenario method.....

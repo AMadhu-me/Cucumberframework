@@ -14,74 +14,57 @@ import java.util.List;
 public class SearchCustomerPage extends Baseclass {
 
 
-	@FindBy(how = How.ID, using = "SearchEmail")
-	@CacheLookup
-	WebElement txtEmail;
-
-	@FindBy(how = How.ID, using = "SearchFirstName")
-	@CacheLookup
-	WebElement txtFirstName;
-
-	@FindBy(how = How.ID, using = "SearchLastName")
-	@CacheLookup
-	WebElement txtLastName;
-
-	@FindBy(how = How.ID, using = "search-customers")
-	@CacheLookup
-	WebElement btnSearch;
-
-	@FindBy(how = How.XPATH, using = "//table[@role='grid']")
-	@CacheLookup
-	WebElement tblSearchResults;
-
-	@FindBy(how = How.XPATH, using = "//table[@id='customers-grid']")
-	WebElement table;
-
-	@FindBy(how = How.XPATH, using = "//table[@id='customers-grid']//tbody/tr")
-	List<WebElement> tableRows;
-
-	@FindBy(how = How.XPATH, using = "//table[@id='customers-grid']//tbody/tr/td")
-	List<WebElement> tableColumns;
+	By txtEmail=By.id("SearchEmail");
+	By txtFirstName=By.id("SearchFirstName");
+	By txtLastName=By.id("SearchLastName");
+	By btnSearch=By.id("search-customers");
+	By tblSearchResults=By.xpath("//table[@role='grid']");
+	By table=By.xpath("//table[@id='customers-grid']");
+	By tableRows=By.xpath("//table[@id='customers-grid']//tbody/tr");
+	By tableColumns=By.xpath("//table[@id='customers-grid']//tbody/tr/td");
+	By customerRoles=By.className("k-multiselect-wrap k-floatwrap");
 
 	public void setEmail(String email) {
-		txtEmail.clear();
-		txtEmail.sendKeys(email);
+		driver.findElement(txtEmail).clear();
+		driver.findElement(txtEmail).sendKeys(email);
+	}
+	public void setRoles(String role) {
+		driver.findElement(customerRoles).clear();
+		driver.findElement(txtEmail).sendKeys(role);
 	}
 
 	public void setFirstName(String fname) {
 
-		txtFirstName.clear();
-		txtFirstName.sendKeys(fname);
+		driver.findElement(txtFirstName).clear();
+		driver.findElement(txtFirstName).sendKeys(fname);
 	}
 
 	public void setLastName(String lname) {
 
-		txtLastName.clear();
-		txtLastName.sendKeys(lname);
+		driver.findElement(txtLastName).clear();
+		driver.findElement(txtLastName).sendKeys(lname);
 	}
 
 	public void clickSearch() {
-		btnSearch.click();
+		driver.findElement(btnSearch).click();
 
 	}
 
 	public int getNoOfRows() {
-		return (tableRows.size());
+		List<WebElement> rows = driver.findElements(tableRows);
+		return (rows.size());
 	}
 
 	public int getNoOfColumns() {
-		return (tableColumns.size());
+		List<WebElement> col = driver.findElements(tableColumns);
+		return (col.size());
 	}
 
 	public boolean searchCustomerByEmail(String email) {
 		boolean flag = false;
-
 		for (int i = 1; i <= getNoOfRows(); i++) {
-			String emailid = table.findElement(By.xpath("//table[@id='customers-grid']/tbody/tr[" + i + "]/td[2]"))
+			String emailid = driver.findElement(By.xpath("//table[@id='customers-grid']/tbody/tr[" + i + "]/td[2]"))
 					.getText();
-
-					
-			
 			System.out.println(emailid);
 
 			if (emailid.equals(email)) {
@@ -98,7 +81,7 @@ public class SearchCustomerPage extends Baseclass {
 		boolean flag = false;
 
 		for (int i = 1; i <= getNoOfRows(); i++) {
-			String name = table.findElement(By.xpath("//table[@id='customers-grid']/tbody/tr[" + i + "]/td[3]"))
+			String name = driver.findElement(By.xpath("//table[@id='customers-grid']/tbody/tr[" + i + "]/td[3]"))
 					.getText();
 
 			

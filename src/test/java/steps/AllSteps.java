@@ -1,6 +1,7 @@
 package steps;
 
 import Base.Baseclass;
+import Base.GlobalVariables;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -29,7 +30,19 @@ public class AllSteps extends Baseclass {
     public void application() throws Throwable {
         String browserName=csvData.getCSVValue("browser");;
         String environment =csvData.getCSVValue("environment");
-        launchURL(environment,browserName);
+        System.out.println("ScenarioName :========="+GlobalVariables.scenarioName);
+        String executionKey =ExcelDataCollection.getSpecificKeyValue(ExcelDataCollection.scenarioSheetData,GlobalVariables.scenarioName,"executionRequired");
+        if(executionKey.equalsIgnoreCase("yes"))
+        {
+            launchURL(environment,browserName);
+        }
+        else
+        {
+            System.out.println("Execution is not enabled for this scenario : "+GlobalVariables.scenarioName);
+            log.info("Execution is not enabled for this scenario : "+GlobalVariables.scenarioName);
+            Assert.fail("Execution is not enabled for this scenario : "+GlobalVariables.scenarioName);
+
+        }
     }
 
     @When("^Enter the Username and password$")
@@ -50,6 +63,15 @@ public class AllSteps extends Baseclass {
     public void closeBrowser() throws Throwable {
         _loginpage.quitBrowser();
     }
+    @When("User enters Username and Password")
+    public void user_enters_Email_as_and_Password_as() {
+        String loginUser = ExcelDataCollection.getSpecificKeyValue(ExcelDataCollection.usersSheetData,"LoginUser3","userName");
+        String password = ExcelDataCollection.getSpecificKeyValue(ExcelDataCollection.usersSheetData,"LoginUser3","passWord");
+        log.info("************* Prvding user and password *****************");
+        lp.setUserName(loginUser);
+        lp.setPassword(password);
+    }
+
     @When("User enters Email as {string} and Password as {string}")
     public void user_enters_Email_as_and_Password_as(String email, String password) {
         log.info("************* Prvding user and password *****************");
@@ -124,7 +146,7 @@ public class AllSteps extends Baseclass {
         System.out.println("Emailaddress:::::"+email);
         addCust.setEmail(email);
         addCust.setPassword("test123");
-        addCust.setCustomerRoles("Guest");
+        addCust.setCustomerRoles("Registered");
         Thread.sleep(3000);
 
         addCust.setManagerOfVendor("Vendor 2");
@@ -153,7 +175,12 @@ public class AllSteps extends Baseclass {
     @When("Enter customer EMail")
     public void enter_customer_EMail() {
         log.info("********* Searching customer details by Email **************");
-        searchCust.setEmail("victoria_victoria@nopCommerce.com");
+        searchCust.setEmail("OxdRv@gmail.com");
+    }
+    @When("Enter customer roles")
+    public void enter_customer_Roles() {
+        log.info("********* Entering thr Role **************");
+        searchCust.setRoles("Guests");
     }
 
     @When("Click on search button")
@@ -164,7 +191,7 @@ public class AllSteps extends Baseclass {
 
     @Then("User should found Email in the Search table")
     public void user_should_found_Email_in_the_Search_table() {
-        boolean status=searchCust.searchCustomerByEmail("victoria_victoria@nopCommerce.com");
+        boolean status=searchCust.searchCustomerByEmail("eTjqv@gmail.com");
         junit.framework.Assert.assertEquals(true, status);
     }
 
@@ -172,17 +199,17 @@ public class AllSteps extends Baseclass {
     @When("Enter customer FirstName")
     public void enter_customer_FirstName() {
         log.info("********* Searching customer details by Name **************");
-        searchCust.setFirstName("Victoria");
+        searchCust.setFirstName("Reddy");
     }
 
     @When("Enter customer LastName")
     public void enter_customer_LastName() {
-        searchCust.setLastName("Terces");
+        searchCust.setLastName("J");
     }
 
     @Then("User should found Name in the Search table")
     public void user_should_found_Name_in_the_Search_table() {
-        boolean status=searchCust.searchCustomerByName("Victoria Terces");
+        boolean status=searchCust.searchCustomerByName("Reddy J");
         Assert.assertEquals(true, status);
     }
 }

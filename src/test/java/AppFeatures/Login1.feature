@@ -9,7 +9,14 @@ Scenario: Successful Login with Valid Credentials
 	When User click on Log out link 
 	Then Page Title should be "Your store. Login"
 	Then close the browser
-	
+
+@Reddy
+	Scenario: Successful Login with Valid Credentials1
+		Given Launch the application URL
+		When User enters Username and Password
+		And Click on Login
+		When User click on Log out link
+		Then close the browser
 @regression
 Scenario Outline: Login Data Driven
 	Given Launch the application URL
